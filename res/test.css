@@ -1,0 +1,9 @@
+@media screen and (max-width: 960px) {
+  .prise2 {
+	margin: 0 0 10% 0;
+  }
+}
+  .prise {
+  	float: right;
+  	width: 100%;
+  }
