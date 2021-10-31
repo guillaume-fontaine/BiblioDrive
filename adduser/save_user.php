@@ -11,8 +11,8 @@ if(isset($_POST["btnAddUser"])) {
     $stmt->bindValue(":city", $_POST["city"]);
     $stmt->bindValue(":zipcode", $_POST["zipcode"]);
     $stmt->execute();
-    header("Location: http://".$_SERVER["HTTP_HOST"]."/projet/adduser/");
+    header("Location: http://".$_SERVER["HTTP_HOST"]."/BiblioDrive/adduser/");
  }else{
-    header("Location: http://".$_SERVER["HTTP_HOST"]."/projet");
+    header("Location: http://".$_SERVER["HTTP_HOST"]."/BiblioDrive");
  }
 ?>

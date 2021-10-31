@@ -28,7 +28,7 @@ if(isset($_POST["btnAddBook"])) {
                 $stmt->bindValue(":abstract", $_POST["abstract"]);
                 $stmt->bindValue(":targetfile", $image_name);
                 $stmt->execute();
-                header("Location: http://".$_SERVER["HTTP_HOST"]."/projet/bookinfo/?infobook=".$connexion->lastInsertId());
+                header("Location: http://".$_SERVER["HTTP_HOST"]."/BiblioDrive/bookinfo/?infobook=".$connexion->lastInsertId());
 
         } else {
             $message = "Erreur inconnue! Merci de retenter l'ajout plus tard ou de contacter l'administrateur.";
@@ -36,6 +36,6 @@ if(isset($_POST["btnAddBook"])) {
         }
     } 
  }else{
-    header("Location: http://".$_SERVER["HTTP_HOST"]."/projet");
+    header("Location: http://".$_SERVER["HTTP_HOST"]."/BiblioDrive");
  }
 ?>
