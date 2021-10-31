@@ -1,5 +1,5 @@
 
-<?php  // REGION d'origine d'une PLANTE
+<?php  
 
 try {
 
