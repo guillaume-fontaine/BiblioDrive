@@ -1,0 +1,1119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="Generator" content="Microsoft Word 11 (filtered)">
+<title>1&nbsp; HTML (HyperText Markup Language)</title>
+<link rel="stylesheet" type="text/css" href="embeddedstyles.css">
+<meta name="generator" content="chmProcessor">
+</head>
+<body lang="FR" link="blue" vlink="purple">
+<div class="Section1">
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="node210" id=
+"node210"></a>9<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;</span> Projet&nbsp;:
+Biblio-Drive</h1>
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="node211" id=
+"node211"></a>9.1<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Contexte</h2>
+<p class="MsoNormal" style='text-align:justify'>Suite aux dernières
+fermetures pour raisons sanitaires, la bibliothèque de la ville de
+Moulinsart souhaite mettre en place en système d’emprunt via une
+application en ligne.</p>
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="node212" id=
+"node212"></a>9.2<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Modèle relationnel</h2>
+<p class="MsoNormal" style='text-align:justify'>Une rapide
+discussion avec Monsieur Nestor, responsable de la bibliothèque,
+conduit à la réalisation du modèle relationnel suivant&nbsp;:</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="376" height="273" src=
+"PPECoursBasesWeb_fichiers/image099.jpg" alt="image"></p>
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="node213" id=
+"node213"></a><span style=
+'font-size:12.0pt; line-height:120%'>9.3<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+Cas d’utilisations</h2>
+<p class="MsoNormal" style='text-align:justify'>Monsieur Nestor
+identifie par ailleurs un certain nombre de cas d’utilisation de la
+future application.</p>
+<p class="MsoNormal" style='text-align:justify'>Vous trouverez
+ci-après ces cas mis en forme, accompagnés de maquettes d’écran,
+approuvées par M. Nestor.</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node214" id=
+"node214"></a>9.3.1Diagramme de Cas d’Utilisation (UC = Use
+Case)</h3>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="456" height="536" src=
+"PPECoursBasesWeb_fichiers/image100.jpg" alt="image"></p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node215" id=
+"node215"></a>9.3.2UC0&nbsp;: Page d’accueil.</h3>
+<p class="MsoNormal">Accessible aux membres, comme aux
+visiteurs.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="578" height="338" src=
+"PPECoursBasesWeb_fichiers/image101.gif" alt="image"></p>
+<p class="MsoNormal" style='text-align:justify'>HTML, sauf
+carrousel, alimenté par les 2 dernières acquisitions (pour
+récupérer les deux dernières acquisitions vous travaillerez sur le
+champs «&nbsp;dateajout&nbsp;».</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node216" id=
+"node216"></a>9.3.3UC 1&nbsp;: Liste des livres d’un auteur</h3>
+<p class="MsoNormal" align="center" style='text-align:center'>
+&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="626" height="302" src=
+"PPECoursBasesWeb_fichiers/image102.gif" alt="image"></p>
+<p class="MsoNormal" style='text-align:justify'>&nbsp;</p>
+<p class="MsoNormal" style='text-align:justify'>Le visiteur, ou
+membre, saisit un nom d’auteur dans la zone de saisie (barre de
+menu), une validation de&nbsp; cette saisie affiche les titres
+disponibles de l’auteur indiqué. Les titres sont cliquables et un
+clic sur un des titres affichera une description détaillé de ce
+livre.</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node217" id=
+"node217"></a>9.3.4UC2&nbsp;: Détail d’un livre (visiteur, sans
+identification).</h3>
+<p class="MsoNormal" style='text-align:justify'>L’affichage de
+cette vue n’est pas conditionnée a authentification.</p>
+<p class="MsoNormal" style='text-align:justify'>&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="637" height="333" src=
+"PPECoursBasesWeb_fichiers/image103.gif" alt="image"></p>
+<p class="MsoNormal" style='text-align:justify'>&nbsp;</p>
+<p class="MsoNormal" style='text-align:justify'>Si l’utilisateur
+n’est pas authentifié, il a toute la description du «&nbsp;titre
+cliqué&nbsp;», mais ne peut ajouter de livre à son panier (pour les
+sites marchands, la chose est généralement possible).</p>
+<p class="MsoNormal" style='text-align:justify'>Pour connaître la
+disponibilité d’un livre, vous vérifierez qu’il n’y a pas d’emprunt
+en cours (présence d’un emprunt, dans table «&nbsp;emprunter&nbsp;»
+avec «&nbsp;dateretour&nbsp;» à null).</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node218" id=
+"node218"></a>9.3.5UC3&nbsp;: Se connecter</h3>
+<p class="MsoNormal" style='text-align:justify'>Si le visiteur veut
+emprunter, il devra posséder un compte de membre, créée par un
+administrateur. Bouton «&nbsp;Connexion&nbsp;», cadre sur la
+droite.</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node219" id=
+"node219"></a>9.3.6UC4. Détail livre (profil membre, après
+identification)</h3>
+<p class="MsoNormal">Idem UC 2, mais cette fois le bouton
+«&nbsp;emprunter&nbsp;» est disponible et ainsi que les
+informations sur le membre connecté.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="626" height="278" src=
+"PPECoursBasesWeb_fichiers/image104.gif" alt="image"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Un clic sur «&nbsp;Emprunter&nbsp;» ajoutera
+le numéro du livre souhaité dans un tableau «&nbsp;Panier&nbsp;»,
+tableau lui-même stocké dans le tableau associatif $_SESSION (une
+entrée pour le «&nbsp;tableau panier&nbsp;», une entrée pour le mél
+utilisateur, pour son profil, son adresse…). Voir cours pour la
+gestion des sessions.</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node220" id=
+"node220"></a>9.3.7UC5&nbsp;: Voir panier.</h3>
+<p class="MsoNormal">Suite a clic sur «&nbsp;Emprunter&nbsp;», ou
+sur «&nbsp;Panier&nbsp;», dans la barre de menu.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="566" height="284" src=
+"PPECoursBasesWeb_fichiers/image105.gif" alt="image"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><i>Nota Bene</i>&nbsp;: pas plus de 5 emprunts
+à la fois possible (il faudra compter les «&nbsp;emprunts&nbsp;» en
+cours pour le membre connecté.</p>
+<p class="MsoNormal">Sur «&nbsp;Valider panier&nbsp;», le tableau
+Panier stocké dans $_SESSION sera parcouru et pour chaque n° de
+livre dans le Panier on ajoutera une livre dans la table
+«&nbsp;emprunter&nbsp;». Puis le panier est vidé (voir cours
+Sessions)</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node221" id=
+"node221"></a>9.3.8UC7&nbsp;: Ajouter un livre.</h3>
+<p class="MsoNormal">Ce UC est associé exclusivement au profil
+«&nbsp;Administrateur&nbsp;».</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="591" height="350" src=
+"PPECoursBasesWeb_fichiers/image106.gif" alt="image"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Notez la barre de menu, spécifique à ce
+profil, «&nbsp;Administrateur&nbsp;».</p>
+<p class="MsoNormal">Le n° du livre sera généré automatiquement,
+ainsi que la date d’ajout (date courante, voir fonction PHP).</p>
+<p class="MsoNormal">Les auteurs seront proposés via une liste
+(HTML select), alimentée par la table «&nbsp;auteur&nbsp;».</p>
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="node222" id=
+"node222"></a>9.3.9UC8&nbsp;: Créer un membre.</h3>
+<p class="MsoNormal">Idem UC7. Accessible uniquement par un
+utilisateur avec le profil «&nbsp;Administrateur&nbsp;».</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style='text-align:center'>
+<img border="0" width="553" height="321" src=
+"PPECoursBasesWeb_fichiers/image107.gif" alt="image"></p>
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="node223" id=
+"node223"></a>9.4<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Travail à faire</h2>
+<p class="MsoNormal">Vous coderez les Use Cases présentés
+ci-dessus.</p>
+<p class="MsoNormal">Les accès à la base de données devront être
+réalisés via des requêtes préparées.</p>
+<p class="MsoNormal">Les mots de passe encryptés … (voir cours
+PHP).</p>
+<p class="MsoNormal">Pour la gestion des styles vous utiliserez
+Bootstrap.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="node224" id=
+"node224"></a>9.5<span style=
+'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Annexe – Le script BDD Biblio-Drive</h2>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;phpMyAdmin&nbsp;SQL&nbsp;Dump</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;version&nbsp;5.0.2</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;https://www.phpmyadmin.net/</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Host:&nbsp;127.0.0.1</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Generation&nbsp;Time:&nbsp;Nov&nbsp;22,&nbsp;2020&nbsp;at&nbsp;02:36&nbsp;PM</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Server&nbsp;version:&nbsp;10.4.11-MariaDB</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;PHP&nbsp;Version:&nbsp;7.4.5</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>SET</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;SQL_MODE&nbsp;=&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>"NO_AUTO_VALUE_ON_ZERO"</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>START</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TRANSACTION</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>SET</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;time_zone&nbsp;=&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>"+00:00"</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Database:&nbsp;`bibliodrive`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Table&nbsp;structure&nbsp;for&nbsp;table&nbsp;`auteur`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CREATE</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`auteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nom`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`prenom`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;ENGINE=InnoDB&nbsp;DEFAULT&nbsp;CHARSET=utf8mb4;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Table&nbsp;structure&nbsp;for&nbsp;table&nbsp;`emprunter`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CREATE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`emprunter`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`dateemprunt`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>date</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`dateretour`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>date</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;DEFAULT&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;ENGINE=InnoDB&nbsp;DEFAULT&nbsp;CHARSET=utf8mb4;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Table&nbsp;structure&nbsp;for&nbsp;table&nbsp;`livre`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CREATE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`livre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`titre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>128</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`isbn13`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>char</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>13</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`anneeparution`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`resume`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>text</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`dateajout`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>date</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;DEFAULT&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`image`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>(</span><span style='font-size:10.5pt;font-family:Consolas;color:#098658'>255</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;DEFAULT&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;ENGINE=InnoDB&nbsp;DEFAULT&nbsp;CHARSET=utf8mb4;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--&nbsp;Table&nbsp;structure&nbsp;for&nbsp;table&nbsp;`utilisateur`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:green'>--</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CREATE</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`utilisateur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`motdepasse`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nom`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`prenom`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`adresse`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>255</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`ville`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>40</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`codepostal`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`profil`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>varchar</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>15</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;ENGINE=InnoDB&nbsp;DEFAULT&nbsp;CHARSET=utf8mb4;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`auteur`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>PRIMARY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`emprunter`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>PRIMARY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>,</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`dateemprunt`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>),</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`fk_emprunter_livre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`livre`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>PRIMARY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>),</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>ADD&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`fk_livre_auteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`utilisateur`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>PRIMARY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`auteur`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>MODIFY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;AUTO_INCREMENT;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`livre`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>MODIFY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>int</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#098658'>11</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NOT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>NULL</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;AUTO_INCREMENT;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`emprunter`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CONSTRAINT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`fk_emprunter_livre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>FOREIGN&nbsp;KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>REFERENCES</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`livre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`nolivre`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>),</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>CONSTRAINT</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`fk_emprunter_utilisateur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>FOREIGN&nbsp;KEY</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>REFERENCES</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`utilisateur`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:#A31515'>`mel`</span><span lang="EN-GB"
+style=
+'font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span lang="EN-GB" style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>ALTER</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>TABLE</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`livre`</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;&nbsp;ADD&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>CONSTRAINT</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`fk_livre_auteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>FOREIGN&nbsp;KEY</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>)&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:blue'>REFERENCES</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`auteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;(</span><span style='font-size:10.5pt;font-family:Consolas;color:#A31515'>`noauteur`</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>);</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:blue'>COMMIT</span><span style='font-size:10.5pt;font-family:Consolas;color:black'>;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal" style='line-height:14.25pt;background:white'>
+<span style=
+'font-size:10.5pt;font-family:Consolas;color:black'>&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</body>
+</html>
