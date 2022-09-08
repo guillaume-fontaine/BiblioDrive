@@ -9,7 +9,7 @@ Prérequis
 
 Dans un invité de commande déplacer vous dans le répertoire où vous voulez installer le projet,
 puis tapez la commande suivante --> git clone https://github.com/trollgun/BiblioDrive
-un dossier BiblioDrive s'installera avec le projet a l'intèrieur.
+un dossier BiblioDrive s'installera avec le projet à l'intérieur.
 
 
 
