@@ -17,7 +17,7 @@ try {
     while($enregistrement = $select->fetch()){
 
 echo'
-    <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/bookinfo/?infobook='.$enregistrement->nolivre.'" class="text-center text-dark">
+    <a href="https://'.$_SERVER["HTTP_HOST"].'/bookinfo/?infobook='.$enregistrement->nolivre.'" class="text-center text-dark">
      <div class="card bg-secondary">
       <div class="card-body">';
         echo $enregistrement->titre."";

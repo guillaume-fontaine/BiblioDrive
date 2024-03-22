@@ -30,7 +30,7 @@ require_once('../res/body_start.php');
 			echo'
   <div class="row">
    <div class="col-md-9">
-    <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/bookinfo/?infobook='.$enregistrement->nolivre.'" class="text-center text-dark">
+    <a href="https://'.$_SERVER["HTTP_HOST"].'/bookinfo/?infobook='.$enregistrement->nolivre.'" class="text-center text-dark">
      <div class="card bg-secondary">
       <div class="card-body">
        <h4>
@@ -43,7 +43,7 @@ require_once('../res/body_start.php');
    <div class="col-md-3">
     <div class="card bg-secondary">
      <div class="card-body">
-      <form action="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/bookinfo/?infobook='.$enregistrement->nolivre.'" class="form-row" method="post">                         
+      <form action="https://'.$_SERVER["HTTP_HOST"].'/bookinfo/?infobook='.$enregistrement->nolivre.'" class="form-row" method="post">                         
        <button type="submit" name="btnRemoveCartRedirectShop" class="btn btn-primary">Enlever du panier</button>
       </form>
      </div>

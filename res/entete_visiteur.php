@@ -24,7 +24,7 @@ echo'  <div class="row">
        </div>
       </div>
       <div class="col-md-3">
-       <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/shop" class="text-dark">
+       <a href="https://'.$_SERVER["HTTP_HOST"].'/shop" class="text-dark">
         <div class="card bg-secondary">
          <div class="card-body">
           <h2 class="text-center">Panier</h2>
@@ -35,7 +35,7 @@ echo'  <div class="row">
      </div>
     </div>
     <div class="col-md-3">
-     <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive">
+     <a href="https://'.$_SERVER["HTTP_HOST"].'">
       <div class="card bg-secondary">
        <div class="card-body">
         <img class="card-img-top img-fluid" src="../res/moulinsart.jpg">

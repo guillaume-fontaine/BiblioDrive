@@ -3,7 +3,7 @@ session_start();
 require_once('../res/connexion.php');
 if(isset($_POST["btnRemoveCartRedirectShop"]) && in_array($_GET["infobook"], $_SESSION["shop"])){
     unset($_SESSION["shop"][array_search($_GET["infobook"], $_SESSION["shop"])]);
-    header("Location: http://".$_SERVER["HTTP_HOST"]."/BiblioDrive/shop");
+    header("Location: https://".$_SERVER["HTTP_HOST"]."/shop");
 }
 require_once('../res/start_html.php');
 require_once('../res/entete.php');
