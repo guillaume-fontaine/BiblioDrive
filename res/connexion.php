@@ -5,7 +5,7 @@ try {
   $db_dbname = getenv('DB_DBNAME');
 
 
-    $dns = 'mysql:host='.$db_host';dbname='.$db_dbname;
+    $dns = 'mysql:host='.$db_host.';dbname='.$db_dbname;
     $utilisateur = getenv('DB_USER');
     $motDePasse = getenv('DB_PASSWD');
     $connexion = new PDO( $dns, $utilisateur, $motDePasse );
