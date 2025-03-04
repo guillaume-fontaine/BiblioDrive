@@ -1,0 +1,4 @@
+# Reverse proxy configuration for bibliodrive.localhost
+bibliodrive.localhost {
+    reverse_proxy app:80
+}
