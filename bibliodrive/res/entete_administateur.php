@@ -12,10 +12,10 @@ echo'  <div class="row">
         <div class="card-body">
          <div class="row">
           <div class="col-md-3">
-           <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/addbook" class="text-dark">Ajouter un livre</a>
+           <a href="http://'.$_SERVER["HTTP_HOST"].'/addbook" class="text-dark">Ajouter un livre</a>
           </div>
           <div class="col-md-3">
-           <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/adduser" class="text-dark">Ajouter un utilisateur</a>
+           <a href="http://'.$_SERVER["HTTP_HOST"].'/adduser" class="text-dark">Ajouter un utilisateur</a>
           </div>
          </div>
         </div>
@@ -24,7 +24,7 @@ echo'  <div class="row">
      </div>
     </div>
     <div class="col-md-3">
-     <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive">
+     <a href="http://'.$_SERVER["HTTP_HOST"].'">
       <div class="card bg-secondary">
        <div class="card-body">
         <img class="card-img-top img-fluid" src="../res/moulinsart.jpg">

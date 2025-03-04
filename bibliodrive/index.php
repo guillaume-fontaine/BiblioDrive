@@ -35,10 +35,10 @@ require_once('res/connexion.php');
         <div class="card-body">
          <div class="row">
           <div class="col-md-3">
-           <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/addbook" class="text-dark">Ajouter un livre</a>
+           <a href="http://'.$_SERVER["HTTP_HOST"].'/addbook" class="text-dark">Ajouter un livre</a>
           </div>
           <div class="col-md-3">
-           <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/adduser" class="text-dark">Ajouter un utilisateur</a>
+           <a href="http://'.$_SERVER["HTTP_HOST"].'/adduser" class="text-dark">Ajouter un utilisateur</a>
           </div>
          </div>
         </div>
@@ -47,7 +47,7 @@ require_once('res/connexion.php');
      </div>
     </div>
     <div class="col-md-3">
-     <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive">
+     <a href="http://'.$_SERVER["HTTP_HOST"].'">
       <div class="card bg-secondary">
        <div class="card-body">
         <img class="card-img-top img-fluid" src="res/moulinsart.jpg">
@@ -82,7 +82,7 @@ require_once('res/connexion.php');
        </div>
       </div>
       <div class="col-md-3">
-       <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/shop" class="text-dark">
+       <a href="http://'.$_SERVER["HTTP_HOST"].'/shop" class="text-dark">
         <div class="card bg-secondary">
          <div class="card-body">
           <h2 class="text-center">Panier</h2>
@@ -93,7 +93,7 @@ require_once('res/connexion.php');
      </div>
     </div>
     <div class="col-md-3">
-     <a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive">
+     <a href="http://'.$_SERVER["HTTP_HOST"].'">
       <div class="card bg-secondary">
        <div class="card-body">
         <img class="card-img-top img-fluid" src="res/moulinsart.jpg">
@@ -120,7 +120,7 @@ $stmt->execute();
 
 while($enregistrement = $stmt->fetch()){
 	echo'
-	<a href="http://'.$_SERVER["HTTP_HOST"].'/BiblioDrive/bookinfo/?infobook='.$enregistrement->nolivre.'">
+	<a href="http://'.$_SERVER["HTTP_HOST"].'/bookinfo/?infobook='.$enregistrement->nolivre.'">
 	  <div class="item">
 	   <img class="img-fluid" style="width:400px" src="res/'.$enregistrement->image.'" alt="'.$enregistrement->titre.'">
     </div>
