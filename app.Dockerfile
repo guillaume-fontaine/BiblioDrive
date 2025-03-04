@@ -1,5 +1,5 @@
 # Utiliser l'image officielle de PHP avec Apache sur Alpine Linux
-FROM php:8.1-apache-alpine
+FROM php:8.4.5RC1-apache-bullseye
 
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /var/www/html
